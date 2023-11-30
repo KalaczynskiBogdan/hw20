@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="testtext">TestText</string>
+    <string name="testName">testName\n</string>
+    <string name="testAge">testAge\n</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter">enter</string>
+    <string name="enter_login" />
+    <string name="repeat_password">repeat your password</string>
+    <string name="enter_your_login">enter your login</string>
+    <string name="enter_password">enter the password</string>
+    <string name="enter_the_login">enter the login</string>
+</resources>
