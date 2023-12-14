@@ -23,4 +23,5 @@ class BlankFragment : Fragment() {
 
         return binding!!.root
     }
+
 }

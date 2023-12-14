@@ -11,4 +11,18 @@
     <string name="enter_your_login">enter your login</string>
     <string name="enter_password">enter the password</string>
     <string name="enter_the_login">enter the login</string>
+    <string name="info">Info</string>
+    <string name="name">Name</string>
+    <string name="position">Position</string>
+    <string name="level_of_trust">Level of trust</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="hello_blank_fragment1">1</string>
+    <string name="hello_blank_fragment2">2</string>
+    <string name="hello_blank_fragment3">3</string>
+    <string name="user">user</string>
+    <string name="enter_the_name">enter your name</string>
+    <string name="save">save</string>
+    <string name="back">back</string>
 </resources>

@@ -15,7 +15,10 @@ import com.example.myapplication.databinding.FragmentLoginBinding
 import java.util.Locale
 
 class LoginFragment : Fragment() {
-    var navigationListener: NavigationListener? = null
+    private var loginName = ""
+    private var password = ""
+
+    private var navigationListener: NavigationListener? = null
     private var _binding: FragmentLoginBinding? = null
     private val binding: FragmentLoginBinding
         get() = _binding!!
@@ -53,6 +56,8 @@ class LoginFragment : Fragment() {
                     if (passwordInput == secondPasswordInput) {
                         showToast("You have been registered")
                         navigationListener?.showFirstScreen()
+                        password = passwordInput
+                        loginName = loginInput
                     } else {
                         showToast("Passwords are different")
                     }

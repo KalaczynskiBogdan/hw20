@@ -33,4 +33,11 @@ class MainActivity : AppCompatActivity(), NavigationListener {
         transaction.commit()
     }
 
+    override fun showSecondScreen() {
+        val fragment = DetailsOfEmployeesFragment()
+        val fragmentManager = supportFragmentManager
+        val transaction = fragmentManager.beginTransaction()
+        transaction.replace(R.id.flContainer, fragment)
+        transaction.commit()
+    }
 }
