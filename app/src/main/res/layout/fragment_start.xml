@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".hw20.StartFragment">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="@string/set_images_from_internet"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivFirstPhoto"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/ic_user"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+
+    <ImageView
+        android:id="@+id/ivSecondPhoto"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_user"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@+id/ivFirstPhoto"
+        app:layout_constraintTop_toBottomOf="@id/ivFirstPhoto" />
+
+    <ImageView
+        android:id="@+id/ivThirdPhoto"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_user"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/ivSecondPhoto"
+        app:layout_constraintTop_toBottomOf="@id/ivSecondPhoto" />
+
+    <ImageView
+        android:id="@+id/ivFourthPhoto"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_user"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="@id/ivThirdPhoto"
+        app:layout_constraintTop_toBottomOf="@id/ivThirdPhoto" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/press"
+        app:layout_constraintEnd_toEndOf="@id/ivFourthPhoto"
+        app:layout_constraintStart_toStartOf="@id/ivFourthPhoto"
+        app:layout_constraintTop_toBottomOf="@id/ivFourthPhoto" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

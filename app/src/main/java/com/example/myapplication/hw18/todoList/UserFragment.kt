@@ -2,7 +2,6 @@ package com.example.myapplication.hw18.todoList
 
 import android.content.Context
 import android.os.Bundle
-import android.text.InputType
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -11,9 +10,17 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.fragment.app.setFragmentResult
+import androidx.fragment.app.setFragmentResultListener
 import com.example.myapplication.databinding.FragmentUserBinding
 
 class UserFragment : Fragment() {
+    companion object{
+        const val KEY_URI = "KEY_URI"
+    }
+
+    private var isInputEnabled = true
+
     private val galleryLauncher =
         registerForActivityResult(ActivityResultContracts.GetContent()) { galleryUri ->
             binding.imageUserTitle.setImageURI(galleryUri)
@@ -45,10 +52,11 @@ class UserFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         findView()
-        makeProfile()
+        initClickListeners()
         buttonBack.setOnClickListener {
             navigation?.showListScreen()
         }
+
     }
 
     private fun findView() {
@@ -58,43 +66,26 @@ class UserFragment : Fragment() {
         buttonBack = binding.buttonBack
     }
 
-    private fun makeProfile() {
+    private fun initClickListeners() {
         image.setOnClickListener {
             galleryLauncher.launch("image/*")
         }
         button.setOnClickListener {
             textName.apply {
-                isFocusable = false
-                isClickable = false
-                isEnabled = false
+                isClickable = isInputEnabled
+                isEnabled = isInputEnabled
             }
             image.apply {
-                isFocusable = false
-                isClickable = false
-                isEnabled = false
+                isFocusable = isInputEnabled
+                isClickable = isInputEnabled
+                isEnabled = isInputEnabled
             }
-            val textChange = "change"
-            button.text = textChange
-            changeProfile()
-        }
-    }
-
-    private fun changeProfile() {
-        button.setOnClickListener {
-            textName.apply {
-                isFocusable = true
-                isClickable = true
-                isEnabled = true
-                inputType = InputType.TYPE_CLASS_TEXT
+            button.text = if (isInputEnabled) {
+                "save"
+            } else {
+                "change"
             }
-            image.apply {
-                isFocusable = true
-                isClickable = true
-                isEnabled = true
-            }
-            val textChange = "save"
-            button.text = textChange
-            makeProfile()
+            isInputEnabled = !isInputEnabled
         }
     }
 }

@@ -8,9 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.appcompat.widget.Toolbar
+import androidx.fragment.app.setFragmentResultListener
 import androidx.viewpager2.widget.ViewPager2
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentListBinding
+import com.example.myapplication.hw18.todoList.UserFragment.Companion.KEY_URI
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 
@@ -50,6 +52,7 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         showList()
         clickOnImage()
+
     }
 
     private fun showList() {

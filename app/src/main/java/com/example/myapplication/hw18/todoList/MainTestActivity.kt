@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.ImageView
 import com.example.myapplication.R
 import com.example.myapplication.databinding.ActivityMainTestBinding
+import com.example.myapplication.databinding.FragmentListBinding
 
 class MainTestActivity : AppCompatActivity(), Navigation {
     private var _binding: ActivityMainTestBinding? = null

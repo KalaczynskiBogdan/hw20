@@ -32,6 +32,7 @@ class DeletedFragment : Fragment() {
 
         return rootView
     }
+
     companion object {
         private const val NAME_OF_ITEM = "name"
         fun newInstance(name: String) = DeletedFragment().apply {
